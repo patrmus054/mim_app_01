@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ccc">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="25dp"
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginBottom="25dp"
+                android:textSize="36dp" />
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="120dp"
+            android:layout_height="100dp"
+            android:layout_margin="25dp"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const1"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/linear1">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_hour"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="horizontal" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:layout_below="@+id/const1">
+
+        <TextView
+            android:id="@+id/tv_humidity"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:id="@+id/tv_wind"
+            android:layout_width="106dp"
+            android:layout_height="52dp"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:id="@+id/tv_air_pressure"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:id="@+id/tv_uv"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linear2">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </LinearLayout>
+</RelativeLayout>
